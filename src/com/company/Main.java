@@ -6,14 +6,15 @@ public class Main
     public static void main(String[] args)
     {
         System.out.println("===============================================");
-        System.out.println("Please choose and enter one of the following.");
-        System.out.println("-----------------------------------------------");
-        System.out.println("           \"c\" for Circle.");
-        System.out.println("           \"s\" for Square.");
-        System.out.println("           \"r\" for rectangle.");
+        System.out.println("|Please choose and enter one of the following.|");
+        System.out.println("----------------------------------------------|");
+        System.out.println("|          \"c\" for Circle.                    |");
+        System.out.println("|          \"s\" for Square.                    |");
+        System.out.println("|          \"r\" for rectangle.                 |");
         System.out.println("===============================================");
         java.util.Scanner input = new java.util.Scanner(System.in);
         String shape = input.nextLine();
+
 
         switch (shape)
         {
@@ -29,7 +30,9 @@ public class Main
                 System.out.println("Please select enter area or perimeter.");
                 rectangle();
                 break;
-
+                default:
+                    System.out.println("Incorrect input, please try again.");
+                    break;
         }
     }
 
@@ -45,6 +48,9 @@ public class Main
                 break;
             case "p":
                 circlePerimeter();
+                break;
+            default:
+                System.out.println("Incorrect input, please try again.");
                 break;
         }
     }
@@ -89,6 +95,9 @@ public class Main
             case "p":
                 squarePerimeter();
                 break;
+            default:
+                System.out.println("Incorrect input, please try again.");
+                break;
         }
     }
 
@@ -131,6 +140,9 @@ public class Main
                 break;
             case "p":
                 rectanglePerimeter();
+                break;
+            default:
+                System.out.println("Incorrect input, please try again.");
                 break;
         }
     }
